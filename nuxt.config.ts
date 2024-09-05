@@ -5,5 +5,10 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
-  }
+  },
+  runtimeConfig: {
+    public: {
+      apiKey: process.env.NUXT_API_KEY,
+    },
+  },
 })
